@@ -19,6 +19,7 @@ public class StreetLightServiceImpl implements StreetLightService {
     @Override
     public List<StreetLight> getAllStreetLights() {
         try {
+            // Recuperar todas as luminárias cadastradas.
             return streetLightRepository.findAll();
         } catch (Exception e) {
             throw new RuntimeException("Falha ao recuperar luminárias", e);
@@ -27,6 +28,7 @@ public class StreetLightServiceImpl implements StreetLightService {
 
     @Override
     public Optional<StreetLight> getStreetLightById(Long id) {
+        // Buscar uma luminária por seu ID.
         return streetLightRepository.findById(id);
     }
 
@@ -42,6 +44,7 @@ public class StreetLightServiceImpl implements StreetLightService {
 
     @Override
     public StreetLight updateStreetLight(Long id, StreetLight streetLight) {
+        // Verificar se a luminária com o ID especificado existe.
         if (!streetLightRepository.existsById(id)) {
             throw new IllegalArgumentException("Luminária com id " + id + " não encontrada.");
         }
@@ -56,6 +59,7 @@ public class StreetLightServiceImpl implements StreetLightService {
 
     @Override
     public void deleteStreetLight(Long id) {
+        // Verificar se a luminária com o ID especificado existe antes de excluí-la.
         if (streetLightRepository.existsById(id)) {
             try {
                 streetLightRepository.deleteById(id);
@@ -68,17 +72,21 @@ public class StreetLightServiceImpl implements StreetLightService {
     }
 
     private void validateStreetLight(StreetLight streetLight) {
+        // 1: Validar o status da luminária.
+        // O status só pode ser "Ligada", "Desligada" ou "Quebrada".
         if (streetLight.getStatus() == null ||
                 (!streetLight.getStatus().equalsIgnoreCase("Ligada") &&
                         !streetLight.getStatus().equalsIgnoreCase("Desligada") &&
                         !streetLight.getStatus().equalsIgnoreCase("Quebrada"))) {
             throw new IllegalArgumentException("Status inválido: " + streetLight.getStatus());
         }
-
+        // 2: O consumo de energia não pode ser negativo.
         if (streetLight.getConsumoEnergia() < 0) {
             throw new IllegalArgumentException("O consumo de energia não pode ser negativo.");
         }
 
+        // 3: Validar a data da última manutenção.
+        // Formato da data: "yyyy-MM-dd").
         try {
             LocalDate.parse(streetLight.getUltimoManutencao());
         } catch (DateTimeParseException e) {
