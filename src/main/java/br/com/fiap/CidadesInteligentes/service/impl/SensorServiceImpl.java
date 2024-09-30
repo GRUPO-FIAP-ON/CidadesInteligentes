@@ -27,15 +27,19 @@ public class SensorServiceImpl implements SensorService {
 
     @Override
     public Sensor createSensor(Sensor sensor) {
-        validateSensor(sensor);
+        if (sensor.getNome() == null || sensor.getNome().trim().isEmpty()) {
+            throw new IllegalArgumentException("Nome não pode ser vazio");
+        }
 
         return sensorRepository.save(sensor);
     }
 
+
+
     @Override
     public Sensor updateSensor(Long id, Sensor sensorDetails) {
         Sensor sensor = sensorRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Sensor com ID " + id + " não encontrado"));
+                .orElseThrow(() -> new IllegalArgumentException("Sensor com ID " + id + " não encontrado."));
 
         validateSensor(sensorDetails);
 
@@ -48,14 +52,14 @@ public class SensorServiceImpl implements SensorService {
     @Override
     public void deleteSensor(Long id) {
         Sensor sensor = sensorRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Sensor com ID " + id + " não encontrado"));
+                .orElseThrow(() -> new IllegalArgumentException("Sensor com ID " + id + " não encontrado."));
 
         sensorRepository.delete(sensor);
     }
 
     private void validateSensor(Sensor sensor) {
         if (sensor.getNome() == null || sensor.getNome().trim().isEmpty()) {
-            throw new IllegalArgumentException("O nome do sensor é obrigatório.");
+            throw new IllegalArgumentException("Nome não pode ser vazio.");
         }
 
         if (sensor.getTipo() == null || sensor.getTipo().trim().isEmpty()) {
