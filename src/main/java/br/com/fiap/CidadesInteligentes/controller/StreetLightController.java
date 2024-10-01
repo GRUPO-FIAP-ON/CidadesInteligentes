@@ -24,6 +24,13 @@ public class StreetLightController {
     public ResponseEntity<?> getAllStreetLights() {
         try {
             List<StreetLight> streetLights = streetLightService.getAllStreetLights();
+
+            if (streetLights.isEmpty()) {
+                streetLights.add(new StreetLight(1L, "Rua A", "Ligada", 100.5, "2024-01-15"));
+                streetLights.add(new StreetLight(2L, "Rua B", "Desligada", 0.0, "2024-01-10"));
+                streetLights.add(new StreetLight(3L, "Rua C", "Quebrada", 75.0, "2024-01-01"));
+            }
+
             return ResponseEntity.ok(streetLights);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
