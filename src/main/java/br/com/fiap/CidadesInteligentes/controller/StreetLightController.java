@@ -26,7 +26,7 @@ public class StreetLightController {
             List<StreetLight> streetLights = streetLightService.getAllStreetLights();
 
             if (streetLights.isEmpty()) {
-                streetLights.add(new StreetLight(1L, "Rua A", "Ligada", 100.5, "2024-01-15"));
+                streetLights.add(new StreetLight(1L, "Rua AS", "Ligada", 100.5, "2024-01-15"));
                 streetLights.add(new StreetLight(2L, "Rua B", "Desligada", 0.0, "2024-01-10"));
                 streetLights.add(new StreetLight(3L, "Rua C", "Quebrada", 75.0, "2024-01-01"));
             }
