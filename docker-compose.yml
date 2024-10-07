@@ -14,7 +14,8 @@ services:
     networks:
       - cidadesinteligentes-network
     volumes:
-      - .:/app
+      - ./src:/app/src
+      - ./build/libs:/app/build/libs
 
 networks:
   cidadesinteligentes-network:

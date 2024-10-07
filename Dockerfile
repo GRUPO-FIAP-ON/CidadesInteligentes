@@ -10,8 +10,12 @@ WORKDIR /app
 COPY gradlew gradlew
 COPY gradle gradle
 
-# Copie o arquivo build.gradle
+# Adicione permissões de execução ao gradlew
+RUN chmod +x gradlew
+
+# Copie o arquivo build.gradle e as dependências necessárias
 COPY build.gradle build.gradle
+COPY settings.gradle settings.gradle
 
 # Copie o código fonte
 COPY src ./src
