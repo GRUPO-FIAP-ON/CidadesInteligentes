@@ -38,11 +38,6 @@ jobs:
       - name: Run tests
         run: ./gradlew test --no-daemon
 
-      # Opcional: Verificar cobertura de testes usando Jacoco
-      - name: Generate test report
-        run: ./gradlew jacocoTestReport
-
-      # Opcional: Upload de artefatos dos testes (logs, relatórios de cobertura, etc.)
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
