@@ -22,11 +22,9 @@ jobs:
           distribution: 'temurin'  
           java-version: '21'
 
-      # Adicionando passo para construir o projeto com Gradle
       - name: Build with Gradle
         run: ./gradlew build
 
-      # Listar arquivos de saída para verificar se o JAR foi gerado corretamente
       - name: List build/libs directory
         run: ls -l build/libs
 
