@@ -57,3 +57,6 @@ Abra o Postman e faça requisições para os endpoints da aplicação:
 - GET /sensors/{id} para buscar um sensor por ID.
 - PUT /sensors/{id} para atualizar um sensor.
 - DELETE /sensors/{id} para excluir um sensor.
+
+6 - CD/CI
+Ocorre ao realizar um push na branch main
