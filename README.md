@@ -2,11 +2,13 @@
 Este projeto é uma aplicação voltada para a gestão de sensores e luminárias em ambientes urbanos, com o objetivo de melhorar a eficiência na gestão de recursos e a qualidade de vida nas cidades. A aplicação permite o monitoramento, controle e manutenção de sensores e luminárias de forma integrada.
 
 # Tecnologias Utilizadas
-Java: Linguagem de programação utilizada para o desenvolvimento do backend.
-Spring Boot: Framework para construção de aplicações Java, que facilita a criação de APIs RESTful.
-H2 Database: Banco de dados em memória para armazenamento de dados durante o desenvolvimento e testes.
-Gradle: Ferramenta de gerenciamento de projetos e automação de builds.
-Postman: Ferramenta utilizada para testar as APIs.
+- Java: Linguagem de programação utilizada para o desenvolvimento do backend.
+- Spring Boot: Framework para construção de aplicações Java, que facilita a criação de APIs RESTful.
+- H2 Database: Banco de dados em memória para armazenamento de dados durante o desenvolvimento e testes.
+- Gradle: Ferramenta de gerenciamento de projetos e automação de builds.
+- Postman: Ferramenta utilizada para testar as APIs.
+- Docker:  Ferramenta usada para orquestrar diferentes serviços da aplicação, facilitando a configuração e o gerenciamento do ambiente de desenvolvimento e produção. 
+- Azure Devops: Utilizado para controle de versão, integração contínua e entrega contínua (CI/CD), gerenciamento de projetos, execução de testes automatizados e monitoramento da aplicação.
 
 # Funcionalidades
 # Sensores
