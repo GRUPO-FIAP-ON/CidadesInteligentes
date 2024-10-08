@@ -7,29 +7,30 @@ Este projeto é uma aplicação voltada para a gestão de sensores e luminárias
 - H2 Database: Banco de dados em memória para armazenamento de dados durante o desenvolvimento e testes.
 - Gradle: Ferramenta de gerenciamento de projetos e automação de builds.
 - Postman: Ferramenta utilizada para testar as APIs.
+- JUnit:Biblioteca essencial para a realização de testes unitários em Java.
 - Docker:  Ferramenta usada para orquestrar diferentes serviços da aplicação, facilitando a configuração e o gerenciamento do ambiente de desenvolvimento e produção. 
 - Azure Devops: Utilizado para controle de versão, integração contínua e entrega contínua (CI/CD), gerenciamento de projetos, execução de testes automatizados e monitoramento da aplicação.
 
 # Funcionalidades
 # Sensores
-Criar Sensor: Permite adicionar novos sensores ao sistema.
-Listar Sensores: Recupera todos os sensores cadastrados.
-Buscar Sensor por ID: Obtém informações de um sensor específico através de seu ID.
-Atualizar Sensor: Modifica os dados de um sensor existente.
-Excluir Sensor: Remove um sensor do sistema.
+- Criar Sensor: Permite adicionar novos sensores ao sistema.
+- Listar Sensores: Recupera todos os sensores cadastrados.
+- Buscar Sensor por ID: Obtém informações de um sensor específico através de seu ID.
+- Atualizar Sensor: Modifica os dados de um sensor existente.
+- Excluir Sensor: Remove um sensor do sistema.
 
 # Luminárias
-Criar Luminária: Permite adicionar novas luminárias ao sistema.
-Listar Luminárias: Recupera todas as luminárias cadastradas.
-Buscar Luminária por ID: Obtém informações de uma luminária específica através de seu ID.
-Atualizar Luminária: Modifica os dados de uma luminária existente.
-Excluir Luminária: Remove uma luminária do sistema.
+- Criar Luminária: Permite adicionar novas luminárias ao sistema.
+- Listar Luminárias: Recupera todas as luminárias cadastradas.
+- Buscar Luminária por ID: Obtém informações de uma luminária específica através de seu ID.
+- Atualizar Luminária: Modifica os dados de uma luminária existente.
+- Excluir Luminária: Remove uma luminária do sistema.
 
 # Estrutura do Projeto
-src/main/java/br/com/fiap/CidadesInteligentes/controller: Contém as classes de controle que gerenciam as requisições HTTP.
-src/main/java/br/com/fiap/CidadesInteligentes/model: Contém as classes que representam os modelos de dados.
-src/main/java/br/com/fiap/CidadesInteligentes/repository: Contém as interfaces de repositório para acesso ao banco de dados.
-src/main/java/br/com/fiap/CidadesInteligentes/service: Contém as interfaces e implementações dos serviços que encapsulam a lógica de negócio.
+- src/main/java/br/com/fiap/CidadesInteligentes/controller: Contém as classes de controle que gerenciam as requisições HTTP.
+- src/main/java/br/com/fiap/CidadesInteligentes/model: Contém as classes que representam os modelos de dados.
+- src/main/java/br/com/fiap/CidadesInteligentes/repository: Contém as interfaces de repositório para acesso ao banco de dados.
+- src/main/java/br/com/fiap/CidadesInteligentes/service: Contém as interfaces e implementações dos serviços que encapsulam a lógica de negócio.
 
 # Como Executar o Projeto
 1 - Clone o Repositório:
@@ -51,8 +52,8 @@ Password: password
 
 5 - Testar APIs com Postman:
 Abra o Postman e faça requisições para os endpoints da aplicação:
-GET /sensors para listar todos os sensores.
-POST /sensors para criar um novo sensor.
-GET /sensors/{id} para buscar um sensor por ID.
-PUT /sensors/{id} para atualizar um sensor.
-DELETE /sensors/{id} para excluir um sensor.
+- GET /sensors para listar todos os sensores.
+- POST /sensors para criar um novo sensor.
+- GET /sensors/{id} para buscar um sensor por ID.
+- PUT /sensors/{id} para atualizar um sensor.
+- DELETE /sensors/{id} para excluir um sensor.
