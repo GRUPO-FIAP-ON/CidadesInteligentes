@@ -63,10 +63,10 @@ Ocorre ao realizar um push na branch main
 
 7 - URL da Aplicação
 
-URL da Aplicação: smartcity-fiap-c2hfgggmbfhbeegr.eastus2-01.azurewebsites.net
+URL da Aplicação: https://smartcity-fiap-c2hfgggmbfhbeegr.eastus2-01.azurewebsites.net
 
 Endpoint Fixo: ‘streetlights’
-smartcity-fiap-c2hfgggmbfhbeegr.eastus2-01.azurewebsites.net/streetlights
+https://smartcity-fiap-c2hfgggmbfhbeegr.eastus2-01.azurewebsites.net/streetlights
 
 - A aplicação não possui desenvolvimento FrontEnd, então estabelecemos o endpoint ‘streetlights’ como um endpoint fixo para visualização.
 
